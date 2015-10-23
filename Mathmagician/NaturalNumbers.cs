@@ -12,6 +12,7 @@ namespace Mathmagician
         // Anything outside of the NaturalNumbers class can't access first
         // Known as a data member (don't put literals in methods)
         protected int first;
+        protected int increment;
         // protected means children of class will have access
 
         // Constructor method explicitly declared, overriding default
@@ -19,13 +20,14 @@ namespace Mathmagician
         public NaturalNumbers()
         {
             first = 1;
+            increment = 1;
         }
 
         // mapping expression works for any number after 1
         // virtual allows us to override
         public virtual int GetNext(int x)
         {
-            return x + 1;
+            return x + increment;
         }
 
         // Public Method that returns int, inside NaturalNumbers class
