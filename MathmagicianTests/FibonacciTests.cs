@@ -35,6 +35,16 @@ namespace MathmagicianTests
         }
 
         [TestMethod]
+        public void FibonacciShouldPrintOneOneWhenInputIsTwo()
+        {
+            FibonacciNumbers fib = new FibonacciNumbers();
+            int input = 2;
+            int[] expected = new int[] { 1, 1, };
+            int[] actual = fib.GetSequence(input);
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void FibonacciShouldPrintAVariableSequenceOfNumbers()
         {
             FibonacciNumbers fib = new FibonacciNumbers();

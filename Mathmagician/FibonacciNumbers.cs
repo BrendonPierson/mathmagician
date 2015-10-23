@@ -25,7 +25,10 @@ namespace Mathmagician
         {
             List<int> output = new List<int>();
             output.Add(GetFirst());
+            if (output.Count() < length)
+            {
             output.Add(GetFirst());
+            }
             while (output.Count < length)
             {
                 output.Add(GetNext(output.Last(), output[output.Count() - 2]));
