@@ -11,7 +11,8 @@ namespace Mathmagician
     {
         // Anything outside of the NaturalNumbers class can't access first
         // Known as a data member (don't put literals in methods)
-        private int first;
+        protected int first;
+        // protected means children of class will have access
 
         // Constructor method explicitly declared, overriding default
         // Runs everytime we make a new instance
@@ -21,7 +22,8 @@ namespace Mathmagician
         }
 
         // mapping expression works for any number after 1
-        public int GetNext(int x)
+        // virtual allows us to override
+        public virtual int GetNext(int x)
         {
             return x + 1;
         }
