@@ -17,9 +17,9 @@ namespace Mathmagician
         // need to set up recursive strategy that checks isprime 
         // and contiues to increment
          
-        public static bool isPrime(int x)
+        public bool isPrime(int x)
         {
-            for (int i = 2; i < x; i++)
+            for (int i = 2; i < (x / 2); i++)
             {
                 if(x % i == 0 )
                 {
@@ -32,7 +32,6 @@ namespace Mathmagician
         new public int[] GetSequence(int length)
         {
             List<int> output = new List<int>();
-            int counter = 5;
             output.Add(GetFirst());
 
             if(output.Count < length)
@@ -40,6 +39,7 @@ namespace Mathmagician
                 output.Add(3);
             }
 
+            int counter = 5;
             while (output.Count < length)
             {
                 if (isPrime(counter))
